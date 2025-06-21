@@ -5,7 +5,6 @@ import Hero from "@/components/Hero";
 import HowItWorks from "@/components/HowItWorks";
 import Features from "@/components/Features";
 import SocialProof from "@/components/SocialProof";
-import WhereWeOperate from "@/components/WhereWeOperate";
 import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import FAQ from "@/components/FAQ";
@@ -30,7 +29,6 @@ const Index = () => {
       <HowItWorks />
       <Features />
       <SocialProof />
-      <WhereWeOperate />
       <FAQ />
       <FinalCTA />
       <Footer />

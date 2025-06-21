@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { Menu, X, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link, useLocation } from "react-router-dom";
 import WaitlistModal from "@/components/WaitlistModal";
 
 interface NavigationProps {
@@ -11,11 +12,18 @@ interface NavigationProps {
 const Navigation = ({ isScrolled }: NavigationProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
+  const location = useLocation();
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+    // Only scroll if we're on the home page
+    if (location.pathname === '/') {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Navigate to home page with hash
+      window.location.href = `/#${id}`;
     }
     setIsMenuOpen(false);
   };
@@ -27,12 +35,12 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
       }`}>
         <div className="max-w-[1140px] mx-auto px-6 h-[72px] flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
               <Shield className="w-5 h-5 text-white" />
             </div>
             <span className="text-xl font-bold">Outcome Duel</span>
-          </div>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -48,12 +56,12 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
             >
               Features
             </button>
-            <button 
-              onClick={() => scrollToSection('where')}
+            <Link 
+              to="/where-we-operate"
               className="text-sm font-semibold hover:text-blue-400 transition-colors"
             >
               Where We Operate
-            </button>
+            </Link>
             <button 
               onClick={() => scrollToSection('faq')}
               className="text-sm font-semibold hover:text-blue-400 transition-colors"
@@ -97,12 +105,13 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
               >
                 Features
               </button>
-              <button 
-                onClick={() => scrollToSection('where')}
+              <Link 
+                to="/where-we-operate"
+                onClick={() => setIsMenuOpen(false)}
                 className="block text-sm font-semibold hover:text-blue-400 transition-colors"
               >
                 Where We Operate
-              </button>
+              </Link>
               <button 
                 onClick={() => scrollToSection('faq')}
                 className="block text-sm font-semibold hover:text-blue-400 transition-colors"
