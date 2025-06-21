@@ -44,7 +44,7 @@ const Hero = () => {
                   variant="outline" 
                   size="lg"
                   onClick={() => scrollToSection('how-it-works')}
-                  className="border-white/30 text-white hover:bg-white/10 rounded-full px-8 py-4 text-lg"
+                  className="border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white rounded-full px-8 py-4 text-lg"
                 >
                   Watch Demo
                 </Button>

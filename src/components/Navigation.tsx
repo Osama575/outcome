@@ -50,12 +50,12 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
             >
               How It Works
             </button>
-            <button 
-              onClick={() => scrollToSection('features')}
+            <Link 
+              to="/features"
               className="text-sm font-semibold hover:text-blue-400 transition-colors"
             >
               Features
-            </button>
+            </Link>
             <Link 
               to="/where-we-operate"
               className="text-sm font-semibold hover:text-blue-400 transition-colors"
@@ -99,12 +99,13 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
               >
                 How It Works
               </button>
-              <button 
-                onClick={() => scrollToSection('features')}
+              <Link 
+                to="/features"
+                onClick={() => setIsMenuOpen(false)}
                 className="block text-sm font-semibold hover:text-blue-400 transition-colors"
               >
                 Features
-              </button>
+              </Link>
               <Link 
                 to="/where-we-operate"
                 onClick={() => setIsMenuOpen(false)}

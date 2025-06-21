@@ -1,12 +1,17 @@
 
 import { Shield } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const footerLinks = {
-    Product: ["How It Works", "Features", "Pricing", "Mobile App"],
-    Legal: ["Terms of Service", "Privacy Policy", "Contest Rules", "Responsible Gaming"],
-    Support: ["Help Center", "Contact Us", "Bug Reports", "Feature Requests"],
-    Social: ["Twitter", "Instagram", "Discord", "Reddit"]
+  const handleExternalLink = (url: string) => {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -26,21 +31,134 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Link Columns */}
-          {Object.entries(footerLinks).map(([category, links]) => (
-            <div key={category}>
-              <h4 className="font-semibold mb-4">{category}</h4>
-              <ul className="space-y-2">
-                {links.map((link) => (
-                  <li key={link}>
-                    <button className="text-white/70 hover:text-blue-400 text-sm transition-colors">
-                      {link}
-                    </button>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* Product Column */}
+          <div>
+            <h4 className="font-semibold mb-4">Product</h4>
+            <ul className="space-y-2">
+              <li>
+                <button 
+                  onClick={() => scrollToSection('how-it-works')}
+                  className="text-white/70 hover:text-blue-400 text-sm transition-colors"
+                >
+                  How It Works
+                </button>
+              </li>
+              <li>
+                <Link 
+                  to="/features"
+                  className="text-white/70 hover:text-blue-400 text-sm transition-colors"
+                >
+                  Features
+                </Link>
+              </li>
+              <li>
+                <button className="text-white/70 hover:text-blue-400 text-sm transition-colors">
+                  Pricing
+                </button>
+              </li>
+              <li>
+                <button className="text-white/70 hover:text-blue-400 text-sm transition-colors">
+                  Mobile App
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          {/* Legal Column */}
+          <div>
+            <h4 className="font-semibold mb-4">Legal</h4>
+            <ul className="space-y-2">
+              <li>
+                <button className="text-white/70 hover:text-blue-400 text-sm transition-colors">
+                  Terms of Service
+                </button>
+              </li>
+              <li>
+                <button className="text-white/70 hover:text-blue-400 text-sm transition-colors">
+                  Privacy Policy
+                </button>
+              </li>
+              <li>
+                <button className="text-white/70 hover:text-blue-400 text-sm transition-colors">
+                  Contest Rules
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleExternalLink('https://www.ncpgambling.org/')}
+                  className="text-white/70 hover:text-blue-400 text-sm transition-colors"
+                >
+                  Responsible Gaming
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          {/* Support Column */}
+          <div>
+            <h4 className="font-semibold mb-4">Support</h4>
+            <ul className="space-y-2">
+              <li>
+                <button className="text-white/70 hover:text-blue-400 text-sm transition-colors">
+                  Help Center
+                </button>
+              </li>
+              <li>
+                <button className="text-white/70 hover:text-blue-400 text-sm transition-colors">
+                  Contact Us
+                </button>
+              </li>
+              <li>
+                <button className="text-white/70 hover:text-blue-400 text-sm transition-colors">
+                  Bug Reports
+                </button>
+              </li>
+              <li>
+                <button className="text-white/70 hover:text-blue-400 text-sm transition-colors">
+                  Feature Requests
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          {/* Social Column */}
+          <div>
+            <h4 className="font-semibold mb-4">Social</h4>
+            <ul className="space-y-2">
+              <li>
+                <button 
+                  onClick={() => handleExternalLink('https://twitter.com')}
+                  className="text-white/70 hover:text-blue-400 text-sm transition-colors"
+                >
+                  Twitter
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleExternalLink('https://instagram.com')}
+                  className="text-white/70 hover:text-blue-400 text-sm transition-colors"
+                >
+                  Instagram
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleExternalLink('https://discord.com')}
+                  className="text-white/70 hover:text-blue-400 text-sm transition-colors"
+                >
+                  Discord
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => handleExternalLink('https://reddit.com')}
+                  className="text-white/70 hover:text-blue-400 text-sm transition-colors"
+                >
+                  Reddit
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
 
         {/* Bottom Bar */}
