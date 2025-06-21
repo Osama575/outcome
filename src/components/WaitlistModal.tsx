@@ -38,7 +38,7 @@ const WaitlistModal = ({ isOpen, onClose }: WaitlistModalProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="bg-[#111519] border-white/20 text-white max-w-md">
+      <DialogContent className="bg-black border-blue-900/20 text-white max-w-md">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-center text-white">
             Join the Waitlist
@@ -61,7 +61,7 @@ const WaitlistModal = ({ isOpen, onClose }: WaitlistModalProps) => {
               onChange={(e) => setName(e.target.value)}
               placeholder="Your name"
               required
-              className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
+              className="bg-white/10 border-blue-900/20 text-white placeholder:text-white/60"
             />
           </div>
           
@@ -74,14 +74,14 @@ const WaitlistModal = ({ isOpen, onClose }: WaitlistModalProps) => {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="your@email.com"
               required
-              className="bg-white/10 border-white/20 text-white placeholder:text-white/60"
+              className="bg-white/10 border-blue-900/20 text-white placeholder:text-white/60"
             />
           </div>
 
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-[#18D47B] hover:bg-[#15C06F] text-[#111519] font-semibold py-3"
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3"
           >
             {isSubmitting ? "Joining..." : "Join Waitlist"}
           </Button>

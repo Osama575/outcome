@@ -31,18 +31,18 @@ const SocialProof = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-[#0B0E11]">
+    <section className="py-20 bg-gray-900">
       <div className="max-w-[1140px] mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left - Phone Mockup */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-[#18D47B]/20 to-transparent p-8 rounded-3xl">
+            <div className="bg-gradient-to-br from-blue-600/20 to-transparent p-8 rounded-3xl">
               <img 
                 src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
                 alt="$45 Win Screenshot"
                 className="rounded-2xl shadow-2xl max-w-xs mx-auto"
               />
-              <div className="absolute top-4 left-4 bg-[#18D47B] text-[#111519] px-4 py-2 rounded-full font-bold">
+              <div className="absolute top-4 left-4 bg-blue-600 text-white px-4 py-2 rounded-full font-bold">
                 +$45 Win!
               </div>
             </div>
@@ -69,8 +69,8 @@ const SocialProof = () => {
             </div>
 
             {/* Money Counter */}
-            <div className="text-center p-6 bg-gradient-to-r from-[#18D47B]/10 to-transparent rounded-xl">
-              <div className="text-3xl font-bold text-[#18D47B]">
+            <div className="text-center p-6 bg-gradient-to-r from-blue-600/10 to-transparent rounded-xl">
+              <div className="text-3xl font-bold text-blue-400">
                 ${totalPaid.toLocaleString()}+
               </div>
               <p className="text-white/70">paid to players so far</p>

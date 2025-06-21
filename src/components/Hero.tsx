@@ -24,7 +24,7 @@ const Hero = () => {
               <h1 className="text-4xl md:text-5xl lg:text-[56px] font-bold leading-tight">
                 Challenge Friends. <br />
                 Predict Outcomes. <br />
-                <span className="text-[#18D47B]">Win Cash.</span>
+                <span className="text-blue-400">Win Cash.</span>
               </h1>
               
               <p className="text-lg md:text-xl text-white/80 leading-relaxed">
@@ -36,7 +36,7 @@ const Hero = () => {
                 <Button 
                   size="lg"
                   onClick={() => setIsWaitlistOpen(true)}
-                  className="bg-[#18D47B] hover:bg-[#15C06F] text-[#111519] rounded-full px-8 py-4 text-lg font-semibold"
+                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 py-4 text-lg font-semibold"
                 >
                   Join Waitlist
                 </Button>
@@ -53,15 +53,15 @@ const Hero = () => {
               {/* Trust Row */}
               <div className="flex flex-wrap items-center gap-8 pt-4">
                 <div className="flex items-center gap-2">
-                  <Star className="w-5 h-5 text-[#18D47B] fill-current" />
+                  <Star className="w-5 h-5 text-blue-400 fill-current" />
                   <span className="text-sm font-medium">4.9 App Store</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Zap className="w-5 h-5 text-[#18D47B]" />
+                  <Zap className="w-5 h-5 text-blue-400" />
                   <span className="text-sm font-medium">Instant Payouts</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <Users className="w-5 h-5 text-[#18D47B]" />
+                  <Users className="w-5 h-5 text-blue-400" />
                   <span className="text-sm font-medium">100K+ duels settled</span>
                 </div>
               </div>
@@ -77,7 +77,7 @@ const Hero = () => {
                 />
               </div>
               {/* Glow Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#18D47B]/20 to-transparent rounded-3xl blur-3xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-transparent rounded-3xl blur-3xl"></div>
             </div>
           </div>
         </div>

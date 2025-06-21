@@ -34,7 +34,7 @@ const HowItWorks = () => {
   };
 
   return (
-    <section id="how-it-works" className="py-20 bg-[#0B0E11]">
+    <section id="how-it-works" className="py-20 bg-gray-900">
       <div className="max-w-[1140px] mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">How It Works</h2>
@@ -47,13 +47,13 @@ const HowItWorks = () => {
             <div key={index} className="text-center relative">
               {/* Connection Line */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-[#18D47B] to-transparent z-0"></div>
+                <div className="hidden md:block absolute top-12 left-full w-full h-0.5 bg-gradient-to-r from-blue-600 to-transparent z-0"></div>
               )}
               
               {/* Step Card */}
               <div className="relative z-10">
-                <div className="w-24 h-24 bg-[#18D47B] rounded-full flex items-center justify-center mx-auto mb-4">
-                  <step.icon className="w-10 h-10 text-[#111519]" />
+                <div className="w-24 h-24 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <step.icon className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
                 <p className="text-white/70 text-sm">{step.description}</p>
@@ -68,7 +68,7 @@ const HowItWorks = () => {
             variant="outline"
             size="lg"
             onClick={scrollToSignUp}
-            className="border-[#18D47B] text-[#18D47B] hover:bg-[#18D47B] hover:text-[#111519] rounded-full px-8 py-4"
+            className="border-blue-600 text-blue-400 hover:bg-blue-600 hover:text-white rounded-full px-8 py-4"
           >
             Start a Contest
           </Button>

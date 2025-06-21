@@ -23,13 +23,13 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
   return (
     <>
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-[#111519]/95 backdrop-blur-md border-b border-white/10' : 'bg-transparent'
+        isScrolled ? 'bg-black/95 backdrop-blur-md border-b border-blue-900/20' : 'bg-transparent'
       }`}>
         <div className="max-w-[1140px] mx-auto px-6 h-[72px] flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-[#18D47B] rounded-full flex items-center justify-center">
-              <Shield className="w-5 h-5 text-[#111519]" />
+            <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+              <Shield className="w-5 h-5 text-white" />
             </div>
             <span className="text-xl font-bold">Outcome Duel</span>
           </div>
@@ -38,25 +38,25 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
           <div className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('how-it-works')}
-              className="text-sm font-semibold hover:text-[#18D47B] transition-colors"
+              className="text-sm font-semibold hover:text-blue-400 transition-colors"
             >
               How It Works
             </button>
             <button 
               onClick={() => scrollToSection('features')}
-              className="text-sm font-semibold hover:text-[#18D47B] transition-colors"
+              className="text-sm font-semibold hover:text-blue-400 transition-colors"
             >
               Features
             </button>
             <button 
               onClick={() => scrollToSection('where')}
-              className="text-sm font-semibold hover:text-[#18D47B] transition-colors"
+              className="text-sm font-semibold hover:text-blue-400 transition-colors"
             >
               Where We Operate
             </button>
             <button 
               onClick={() => scrollToSection('faq')}
-              className="text-sm font-semibold hover:text-[#18D47B] transition-colors"
+              className="text-sm font-semibold hover:text-blue-400 transition-colors"
             >
               FAQ
             </button>
@@ -66,7 +66,7 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
           <div className="hidden md:flex items-center">
             <Button 
               onClick={() => setIsWaitlistOpen(true)}
-              className="bg-[#18D47B] hover:bg-[#15C06F] text-[#111519] rounded-full px-6 py-2 text-base font-semibold"
+              className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6 py-2 text-base font-semibold"
             >
               Join Waitlist
             </Button>
@@ -83,36 +83,36 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-[#111519] border-t border-white/10">
+          <div className="md:hidden bg-black border-t border-blue-900/20">
             <div className="px-6 py-4 space-y-4">
               <button 
                 onClick={() => scrollToSection('how-it-works')}
-                className="block text-sm font-semibold hover:text-[#18D47B] transition-colors"
+                className="block text-sm font-semibold hover:text-blue-400 transition-colors"
               >
                 How It Works
               </button>
               <button 
                 onClick={() => scrollToSection('features')}
-                className="block text-sm font-semibold hover:text-[#18D47B] transition-colors"
+                className="block text-sm font-semibold hover:text-blue-400 transition-colors"
               >
                 Features
               </button>
               <button 
                 onClick={() => scrollToSection('where')}
-                className="block text-sm font-semibold hover:text-[#18D47B] transition-colors"
+                className="block text-sm font-semibold hover:text-blue-400 transition-colors"
               >
                 Where We Operate
               </button>
               <button 
                 onClick={() => scrollToSection('faq')}
-                className="block text-sm font-semibold hover:text-[#18D47B] transition-colors"
+                className="block text-sm font-semibold hover:text-blue-400 transition-colors"
               >
                 FAQ
               </button>
               <div className="pt-4">
                 <Button 
                   onClick={() => setIsWaitlistOpen(true)}
-                  className="bg-[#18D47B] hover:bg-[#15C06F] text-[#111519] rounded-full w-full"
+                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full w-full"
                 >
                   Join Waitlist
                 </Button>

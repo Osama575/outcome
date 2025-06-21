@@ -33,7 +33,7 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-20 bg-[#111519]">
+    <section id="faq" className="py-20 bg-black">
       <div className="max-w-[1140px] mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
@@ -52,7 +52,7 @@ const FAQ = () => {
               >
                 <h3 className="text-lg font-semibold">{faq.question}</h3>
                 {openIndex === index ? (
-                  <ChevronUp className="w-5 h-5 text-[#18D47B]" />
+                  <ChevronUp className="w-5 h-5 text-blue-400" />
                 ) : (
                   <ChevronDown className="w-5 h-5 text-white/70" />
                 )}

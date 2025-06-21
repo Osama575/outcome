@@ -53,10 +53,10 @@ const Features = () => {
             return (
               <div 
                 key={index}
-                className="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-[#18D47B]/30 transition-all duration-300 hover:bg-white/10"
+                className="group p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-blue-600/30 transition-all duration-300 hover:bg-white/10"
               >
-                <div className="w-12 h-12 bg-[#18D47B]/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-[#18D47B]/30 transition-colors">
-                  <IconComponent className="w-6 h-6 text-[#18D47B]" />
+                <div className="w-12 h-12 bg-blue-600/20 rounded-full flex items-center justify-center mb-6 group-hover:bg-blue-600/30 transition-colors">
+                  <IconComponent className="w-6 h-6 text-blue-400" />
                 </div>
                 <h3 className="text-xl font-bold mb-4">{feature.title}</h3>
                 <p className="text-white/70 leading-relaxed">{feature.description}</p>

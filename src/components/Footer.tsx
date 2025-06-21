@@ -10,14 +10,14 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-[#0B0E11] border-t border-white/10">
+    <footer className="bg-gray-900 border-t border-blue-900/20">
       <div className="max-w-[1140px] mx-auto px-6 py-12">
         <div className="grid md:grid-cols-5 gap-8">
           {/* Logo Column */}
           <div className="md:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="w-8 h-8 bg-[#18D47B] rounded-full flex items-center justify-center">
-                <Shield className="w-5 h-5 text-[#111519]" />
+              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+                <Shield className="w-5 h-5 text-white" />
               </div>
               <span className="text-xl font-bold">Outcome Duel</span>
             </div>
@@ -33,7 +33,7 @@ const Footer = () => {
               <ul className="space-y-2">
                 {links.map((link) => (
                   <li key={link}>
-                    <button className="text-white/70 hover:text-[#18D47B] text-sm transition-colors">
+                    <button className="text-white/70 hover:text-blue-400 text-sm transition-colors">
                       {link}
                     </button>
                   </li>
@@ -48,9 +48,9 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex flex-wrap gap-6 text-sm text-white/70">
               <span>© Outcome Duel 2025</span>
-              <button className="hover:text-[#18D47B] transition-colors">Terms</button>
-              <button className="hover:text-[#18D47B] transition-colors">Privacy</button>
-              <button className="hover:text-[#18D47B] transition-colors">Contact</button>
+              <button className="hover:text-blue-400 transition-colors">Terms</button>
+              <button className="hover:text-blue-400 transition-colors">Privacy</button>
+              <button className="hover:text-blue-400 transition-colors">Contact</button>
             </div>
           </div>
           <p className="text-xs text-white/50 mt-4 text-center md:text-left">

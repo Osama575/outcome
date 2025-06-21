@@ -24,7 +24,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#111519] text-white overflow-x-hidden">
+    <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <Navigation isScrolled={isScrolled} />
       <Hero />
       <HowItWorks />
