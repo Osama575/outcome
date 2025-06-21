@@ -1,12 +1,40 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect, useState } from "react";
+import Navigation from "@/components/Navigation";
+import Hero from "@/components/Hero";
+import HowItWorks from "@/components/HowItWorks";
+import Features from "@/components/Features";
+import SocialProof from "@/components/SocialProof";
+import WhereWeOperate from "@/components/WhereWeOperate";
+import FinalCTA from "@/components/FinalCTA";
+import Footer from "@/components/Footer";
+import FAQ from "@/components/FAQ";
+import MobileBottomBar from "@/components/MobileBottomBar";
 
 const Index = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-[#111519] text-white overflow-x-hidden">
+      <Navigation isScrolled={isScrolled} />
+      <Hero />
+      <HowItWorks />
+      <Features />
+      <SocialProof />
+      <WhereWeOperate />
+      <FAQ />
+      <FinalCTA />
+      <Footer />
+      <MobileBottomBar />
     </div>
   );
 };
