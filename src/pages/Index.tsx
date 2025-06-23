@@ -25,13 +25,15 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <Navigation isScrolled={isScrolled} />
-      <Hero />
-      <HowItWorks />
-      <Features />
-      <SocialProof />
-      <FAQ />
-      <FinalCTA />
-      <Footer />
+      <div className="bg-black">
+        <Hero />
+        <HowItWorks />
+        <Features />
+        <SocialProof />
+        <FAQ />
+        <FinalCTA />
+        <Footer />
+      </div>
       <MobileBottomBar />
     </div>
   );
