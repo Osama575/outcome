@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Star, Zap, Users, ArrowRight } from "lucide-react";
+import { Star, Zap, Users, ArrowRight, Shield } from "lucide-react";
 import { useState } from "react";
 import WaitlistModal from "@/components/WaitlistModal";
 
