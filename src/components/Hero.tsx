@@ -16,6 +16,22 @@ const Hero = () => {
 
   return (
     <>
+      <style>
+        {`
+          @keyframes float {
+            0%, 100% {
+              transform: translateY(0px);
+            }
+            50% {
+              transform: translateY(-20px);
+            }
+          }
+          .animate-float {
+            animation: float 6s ease-in-out infinite;
+          }
+        `}
+      </style>
+      
       <section className="min-h-screen pt-[72px] flex items-center bg-black">
         <div className="max-w-[1140px] mx-auto px-6 w-full">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -139,20 +155,6 @@ const Hero = () => {
         isOpen={isWaitlistOpen} 
         onClose={() => setIsWaitlistOpen(false)} 
       />
-
-      <style jsx>{`
-        @keyframes float {
-          0%, 100% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-20px);
-          }
-        }
-        .animate-float {
-          animation: float 6s ease-in-out infinite;
-        }
-      `}</style>
     </>
   );
 };
