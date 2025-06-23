@@ -72,7 +72,7 @@ const Hero = () => {
                   </h1>
                   
                   <p className="text-xl md:text-2xl text-gray-300 font-medium max-w-lg">
-                    The easiest way to win money on sports. Make picks on your favorite players and teams.
+                    Compete head-to-head with other players. Equal stakes, winner takes all.
                   </p>
                 </div>
 
@@ -119,11 +119,11 @@ const Hero = () => {
                     <span>Licensed & Regulated</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-blue-400" />
-                    <span>Instant Withdrawals</span>
+                    <Users className="w-4 h-4 text-blue-400" />
+                    <span>Peer-to-Peer</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Users className="w-4 h-4 text-purple-400" />
+                    <Zap className="w-4 h-4 text-purple-400" />
                     <span>18+ Only</span>
                   </div>
                 </div>
@@ -141,7 +141,7 @@ const Hero = () => {
                         <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-gray-900 p-6">
                           
                           {/* Status Bar */}
-                          <div className="flex justify-between items-center text-white text-sm mb-8">
+                          <div className="flex justify-between items-center text-white text-sm mb-6">
                             <span className="font-semibold">9:41</span>
                             <div className="flex items-center gap-1">
                               <div className="flex gap-1">
@@ -155,15 +155,42 @@ const Hero = () => {
                             </div>
                           </div>
 
-                          {/* App Header */}
-                          <div className="text-center mb-8">
-                            <h3 className="text-white font-bold text-2xl mb-2">NBA Tonight</h3>
-                            <p className="text-blue-400 text-sm font-medium">Pick 2-6 players • Win up to 100x</p>
+                          {/* Contest Header */}
+                          <div className="text-center mb-6">
+                            <h3 className="text-white font-bold text-xl mb-1">NBA Head-to-Head</h3>
+                            <p className="text-blue-400 text-sm font-medium">2 Players • $25 Each</p>
                           </div>
 
-                          {/* Player Cards */}
-                          <div className="space-y-4 mb-8">
-                            {/* LeBron James Card */}
+                          {/* Players in Contest */}
+                          <div className="bg-gray-800/50 rounded-xl p-4 mb-6">
+                            <div className="flex justify-between items-center mb-3">
+                              <span className="text-gray-400 text-sm">Players</span>
+                              <span className="text-green-400 text-sm font-semibold">2/2 Joined</span>
+                            </div>
+                            <div className="space-y-2">
+                              <div className="flex items-center justify-between">
+                                <div className="flex items-center gap-2">
+                                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
+                                    <span className="text-white text-xs font-bold">You</span>
+                                  </div>
+                                  <span className="text-white text-sm">Alex_23</span>
+                                </div>
+                                <span className="text-green-400 text-sm font-bold">$25</span>
+                              </div>
+                              <div className="flex items-center justify-between">
+                                <div className="flex items-center gap-2">
+                                  <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
+                                    <span className="text-white text-xs font-bold">MJ</span>
+                                  </div>
+                                  <span className="text-white text-sm">MikeJ_99</span>
+                                </div>
+                                <span className="text-green-400 text-sm font-bold">$25</span>
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Player Pick */}
+                          <div className="space-y-3 mb-6">
                             <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 rounded-xl p-4 border border-purple-500/30">
                               <div className="flex justify-between items-center mb-3">
                                 <div className="flex items-center gap-3">
@@ -180,57 +207,29 @@ const Hero = () => {
                                   <p className="text-xs text-gray-400">Points</p>
                                 </div>
                               </div>
-                              <div className="flex gap-2">
-                                <button className="flex-1 bg-green-600 text-white py-2 px-4 rounded-lg font-semibold text-sm">
-                                  MORE
-                                </button>
-                                <button className="flex-1 bg-red-600 text-white py-2 px-4 rounded-lg font-semibold text-sm">
-                                  LESS
-                                </button>
-                              </div>
-                            </div>
-
-                            {/* Stephen Curry Card */}
-                            <div className="bg-gradient-to-r from-blue-900/40 to-cyan-900/40 rounded-xl p-4 border border-blue-500/30">
-                              <div className="flex justify-between items-center mb-3">
-                                <div className="flex items-center gap-3">
-                                  <div className="w-10 h-10 bg-blue-500 rounded-full flex items-center justify-center">
-                                    <span className="text-white font-bold text-sm">SC</span>
-                                  </div>
-                                  <div>
-                                    <p className="text-white font-semibold">Stephen Curry</p>
-                                    <p className="text-gray-400 text-xs">GSW vs LAL</p>
-                                  </div>
-                                </div>
-                                <div className="text-right">
-                                  <p className="text-green-400 font-bold">4.5</p>
-                                  <p className="text-xs text-gray-400">3-Pointers</p>
-                                </div>
-                              </div>
-                              <div className="flex gap-2">
-                                <button className="flex-1 bg-green-600 text-white py-2 px-4 rounded-lg font-semibold text-sm">
-                                  MORE
-                                </button>
-                                <button className="flex-1 bg-red-600 text-white py-2 px-4 rounded-lg font-semibold text-sm">
-                                  LESS
-                                </button>
+                              <div className="flex justify-between text-sm">
+                                <div className="text-blue-400">Your Pick: MORE</div>
+                                <div className="text-purple-400">Opponent: LESS</div>
                               </div>
                             </div>
                           </div>
 
-                          {/* Entry and Potential Win */}
+                          {/* Contest Status */}
                           <div className="space-y-3">
                             <div className="bg-gray-800/50 rounded-xl p-4">
+                              <div className="flex justify-between items-center mb-2">
+                                <span className="text-gray-400">Total Pot</span>
+                                <span className="text-white font-bold text-xl">$50</span>
+                              </div>
                               <div className="flex justify-between items-center">
-                                <span className="text-gray-400">Entry Fee</span>
-                                <span className="text-white font-bold">$10</span>
+                                <span className="text-gray-400 text-sm">Winner Takes All</span>
+                                <span className="text-green-400 text-sm">Live Contest</span>
                               </div>
                             </div>
                             
-                            <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl p-4">
-                              <div className="flex justify-between items-center">
-                                <span className="text-white">Potential Payout</span>
-                                <span className="text-white font-bold text-xl">$87.50</span>
+                            <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-xl p-4">
+                              <div className="text-center">
+                                <span className="text-white font-bold">Game Starting Soon</span>
                               </div>
                             </div>
                           </div>
