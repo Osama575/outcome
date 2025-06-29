@@ -1,10 +1,7 @@
 
-import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 const FAQ = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   const faqs = [
     {
       question: "Is Outcome Duel legal?",
@@ -40,31 +37,23 @@ const FAQ = () => {
           <p className="text-xl text-white/80">Everything you need to know about Outcome Duel</p>
         </div>
 
-        <div className="max-w-3xl mx-auto space-y-4">
-          {faqs.map((faq, index) => (
-            <div 
-              key={index}
-              className="bg-white/5 border border-white/10 rounded-xl overflow-hidden"
-            >
-              <button
-                className="w-full p-6 text-left flex items-center justify-between hover:bg-white/10 transition-colors"
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
+        <div className="max-w-3xl mx-auto">
+          <Accordion type="single" collapsible className="space-y-4">
+            {faqs.map((faq, index) => (
+              <AccordionItem 
+                key={index}
+                value={`item-${index}`}
+                className="bg-white/5 border border-white/10 rounded-xl overflow-hidden"
               >
-                <h3 className="text-lg font-semibold">{faq.question}</h3>
-                {openIndex === index ? (
-                  <ChevronUp className="w-5 h-5 text-blue-400" />
-                ) : (
-                  <ChevronDown className="w-5 h-5 text-white/70" />
-                )}
-              </button>
-              
-              {openIndex === index && (
-                <div className="px-6 pb-6">
-                  <p className="text-white/80 leading-relaxed">{faq.answer}</p>
-                </div>
-              )}
-            </div>
-          ))}
+                <AccordionTrigger className="text-left px-6 py-6 hover:bg-white/10 transition-colors text-lg font-semibold hover:no-underline [&[data-state=open]>svg]:text-blue-400">
+                  {faq.question}
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-6 text-white/80 leading-relaxed">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
       </div>
     </section>
