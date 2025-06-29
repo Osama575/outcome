@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { ArrowLeft, Football, Basketball, Baseball, Trophy, Users } from 'lucide-react';
+import { ArrowLeft, Zap, Circle, Target, Trophy, Users } from 'lucide-react';
 
 const CreateDuelScreen = () => {
   const [selectedSport, setSelectedSport] = useState('nfl');
@@ -10,9 +10,9 @@ const CreateDuelScreen = () => {
   const [customOdds, setCustomOdds] = useState(1.9);
 
   const sports = [
-    { id: 'nfl', name: 'NFL', icon: Football, color: 'bg-orange-600' },
-    { id: 'nba', name: 'NBA', icon: Basketball, color: 'bg-red-600' },
-    { id: 'mlb', name: 'MLB', icon: Baseball, color: 'bg-blue-600' },
+    { id: 'nfl', name: 'NFL', icon: Zap, color: 'bg-orange-600' },
+    { id: 'nba', name: 'NBA', icon: Circle, color: 'bg-red-600' },
+    { id: 'mlb', name: 'MLB', icon: Target, color: 'bg-blue-600' },
     { id: 'soccer', name: 'Soccer', icon: Trophy, color: 'bg-green-600' },
   ];
 
