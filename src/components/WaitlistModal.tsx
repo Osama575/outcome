@@ -38,22 +38,22 @@ const WaitlistModal = ({ isOpen, onClose }: WaitlistModalProps) => {
 
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="bg-black border-blue-900/20 text-white max-w-md">
+      <DialogContent className="bg-secondary border-primary/20 text-foreground max-w-md">
         <DialogHeader>
-          <DialogTitle className="text-2xl font-bold text-center text-white">
+          <DialogTitle className="text-2xl font-bold text-center text-foreground">
             Join the Waitlist
           </DialogTitle>
         </DialogHeader>
         
         <div className="text-center mb-6">
-          <p className="text-white/80">
+          <p className="text-muted-foreground">
             Be the first to know when Outcome Duel launches on mobile!
           </p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <Label htmlFor="name" className="text-white">Name</Label>
+            <Label htmlFor="name" className="text-foreground">Name</Label>
             <Input
               id="name"
               type="text"
@@ -61,12 +61,12 @@ const WaitlistModal = ({ isOpen, onClose }: WaitlistModalProps) => {
               onChange={(e) => setName(e.target.value)}
               placeholder="Your name"
               required
-              className="bg-white/10 border-blue-900/20 text-white placeholder:text-white/60"
+              className="bg-background/50 border-border text-foreground placeholder:text-muted-foreground"
             />
           </div>
           
           <div>
-            <Label htmlFor="email" className="text-white">Email</Label>
+            <Label htmlFor="email" className="text-foreground">Email</Label>
             <Input
               id="email"
               type="email"
@@ -74,20 +74,20 @@ const WaitlistModal = ({ isOpen, onClose }: WaitlistModalProps) => {
               onChange={(e) => setEmail(e.target.value)}
               placeholder="your@email.com"
               required
-              className="bg-white/10 border-blue-900/20 text-white placeholder:text-white/60"
+              className="bg-background/50 border-border text-foreground placeholder:text-muted-foreground"
             />
           </div>
 
           <Button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3"
+            className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-3"
           >
             {isSubmitting ? "Joining..." : "Join Waitlist"}
           </Button>
         </form>
 
-        <p className="text-xs text-white/60 text-center mt-4">
+        <p className="text-xs text-muted-foreground/60 text-center mt-4">
           We'll never spam you. Unsubscribe anytime.
         </p>
       </DialogContent>
