@@ -43,11 +43,11 @@ const Hero = () => {
         `}
       </style>
       
-      <section className="min-h-screen bg-black relative overflow-hidden">
+      <section className="min-h-screen bg-secondary relative overflow-hidden">
         {/* Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-black to-purple-900/20"></div>
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary to-accent/20"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
         
         <div className="relative z-10 pt-[120px] pb-20">
           <div className="max-w-7xl mx-auto px-6">
@@ -56,7 +56,7 @@ const Hero = () => {
               {/* Left Content */}
               <div className="space-y-8 lg:pr-8">
                 {/* Badge */}
-                <div className="inline-flex items-center gap-2 bg-blue-600/20 border border-blue-600/30 rounded-full px-4 py-2 text-sm font-medium text-blue-400">
+                <div className="inline-flex items-center gap-2 bg-primary/20 border border-primary/30 rounded-full px-4 py-2 text-sm font-medium text-primary">
                   <Zap className="w-4 h-4" />
                   Now Live in Beta
                 </div>
@@ -66,12 +66,12 @@ const Hero = () => {
                   <h1 className="text-5xl md:text-6xl lg:text-7xl font-black leading-[0.9] tracking-tight">
                     Pick More.
                     <br />
-                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-purple-400 to-blue-600">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary">
                       Win More.
                     </span>
                   </h1>
                   
-                  <p className="text-xl md:text-2xl text-gray-300 font-medium max-w-lg">
+                  <p className="text-xl md:text-2xl text-muted-foreground font-medium max-w-lg">
                     Compete head-to-head with other players. Equal stakes, winner takes all.
                   </p>
                 </div>
@@ -79,16 +79,16 @@ const Hero = () => {
                 {/* Stats Row */}
                 <div className="flex flex-wrap items-center gap-8 py-4">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-white">$2M+</div>
-                    <div className="text-sm text-gray-400">Paid Out</div>
+                    <div className="text-2xl font-bold text-foreground">$2M+</div>
+                    <div className="text-sm text-muted-foreground">Paid Out</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-white">500K+</div>
-                    <div className="text-sm text-gray-400">Active Users</div>
+                    <div className="text-2xl font-bold text-foreground">500K+</div>
+                    <div className="text-sm text-muted-foreground">Active Users</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-white">4.8★</div>
-                    <div className="text-sm text-gray-400">App Rating</div>
+                    <div className="text-2xl font-bold text-foreground">4.8★</div>
+                    <div className="text-sm text-muted-foreground">App Rating</div>
                   </div>
                 </div>
 
@@ -97,7 +97,7 @@ const Hero = () => {
                   <Button 
                     size="lg"
                     onClick={() => setIsWaitlistOpen(true)}
-                    className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl px-8 py-6 text-lg font-bold group shadow-xl shadow-blue-500/25"
+                    className="bg-gradient-to-r from-primary to-accent hover:from-primary/90 hover:to-accent/90 text-primary-foreground rounded-xl px-8 py-6 text-lg font-bold group shadow-xl shadow-primary/25"
                   >
                     Get Started Now
                     <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -106,24 +106,24 @@ const Hero = () => {
                     variant="outline" 
                     size="lg"
                     onClick={() => scrollToSection('how-it-works')}
-                    className="border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white rounded-xl px-8 py-6 text-lg bg-transparent"
+                    className="border-border text-foreground hover:bg-muted hover:text-foreground rounded-xl px-8 py-6 text-lg bg-transparent"
                   >
                     See How It Works
                   </Button>
                 </div>
 
                 {/* Trust Indicators */}
-                <div className="flex flex-wrap items-center gap-6 pt-6 text-sm text-gray-400">
+                <div className="flex flex-wrap items-center gap-6 pt-6 text-sm text-muted-foreground">
                   <div className="flex items-center gap-2">
-                    <Shield className="w-4 h-4 text-green-400" />
+                    <Shield className="w-4 h-4 text-accent" />
                     <span>Licensed & Regulated</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Users className="w-4 h-4 text-blue-400" />
+                    <Users className="w-4 h-4 text-primary" />
                     <span>Peer-to-Peer</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-purple-400" />
+                    <Zap className="w-4 h-4 text-accent" />
                     <span>18+ Only</span>
                   </div>
                 </div>
