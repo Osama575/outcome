@@ -43,11 +43,11 @@ const Hero = () => {
         `}
       </style>
       
-      <section className="min-h-screen bg-secondary relative overflow-hidden">
+      <section className="min-h-screen bg-background relative overflow-hidden">
         {/* Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary to-accent/20"></div>
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/5"></div>
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/8 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/8 rounded-full blur-3xl"></div>
         
         <div className="relative z-10 pt-[120px] pb-20">
           <div className="max-w-7xl mx-auto px-6">
