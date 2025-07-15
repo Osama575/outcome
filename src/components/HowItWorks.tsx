@@ -75,11 +75,11 @@ const HowItWorks = () => {
         `}
       </style>
 
-      <section id="how-it-works" className="py-20 bg-secondary relative overflow-hidden">
+      <section id="how-it-works" className="py-20 bg-background relative overflow-hidden">
         {/* Background Effects */}
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-secondary to-accent/10"></div>
-        <div className="absolute top-40 left-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-accent/5"></div>
+        <div className="absolute top-40 left-20 w-72 h-72 bg-primary/8 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent/8 rounded-full blur-3xl"></div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           {/* Header */}
