@@ -31,40 +31,40 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
   return (
     <>
       <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-secondary/95 backdrop-blur-md border-b border-primary/20' : 'bg-transparent'
+        isScrolled ? 'bg-black/95 backdrop-blur-md border-b border-blue-900/20' : 'bg-transparent'
       }`}>
         <div className="max-w-[1140px] mx-auto px-6 h-[72px] flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-              <Shield className="w-5 h-5 text-primary-foreground" />
+            <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
+              <Shield className="w-5 h-5 text-white" />
             </div>
-            <span className="text-xl font-bold text-foreground">Outcome Duel</span>
+            <span className="text-xl font-bold">Outcome Duel</span>
           </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('how-it-works')}
-              className="text-sm font-semibold text-foreground hover:text-primary transition-colors"
+              className="text-sm font-semibold hover:text-blue-400 transition-colors"
             >
               How It Works
             </button>
             <Link 
               to="/features"
-              className="text-sm font-semibold text-foreground hover:text-primary transition-colors"
+              className="text-sm font-semibold hover:text-blue-400 transition-colors"
             >
               Features
             </Link>
             <Link 
               to="/where-we-operate"
-              className="text-sm font-semibold text-foreground hover:text-primary transition-colors"
+              className="text-sm font-semibold hover:text-blue-400 transition-colors"
             >
               Where We Operate
             </Link>
             <button 
               onClick={() => scrollToSection('faq')}
-              className="text-sm font-semibold text-foreground hover:text-primary transition-colors"
+              className="text-sm font-semibold hover:text-blue-400 transition-colors"
             >
               FAQ
             </button>
@@ -74,7 +74,7 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
           <div className="hidden md:flex items-center">
             <Button 
               onClick={() => setIsWaitlistOpen(true)}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full px-6 py-2 text-base font-semibold"
+              className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6 py-2 text-base font-semibold"
             >
               Join Waitlist
             </Button>
@@ -91,38 +91,38 @@ const Navigation = ({ isScrolled }: NavigationProps) => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-secondary border-t border-primary/20">
+          <div className="md:hidden bg-black border-t border-blue-900/20">
             <div className="px-6 py-4 space-y-4">
               <button 
                 onClick={() => scrollToSection('how-it-works')}
-                className="block text-sm font-semibold text-foreground hover:text-primary transition-colors"
+                className="block text-sm font-semibold hover:text-blue-400 transition-colors"
               >
                 How It Works
               </button>
               <Link 
                 to="/features"
                 onClick={() => setIsMenuOpen(false)}
-                className="block text-sm font-semibold text-foreground hover:text-primary transition-colors"
+                className="block text-sm font-semibold hover:text-blue-400 transition-colors"
               >
                 Features
               </Link>
               <Link 
                 to="/where-we-operate"
                 onClick={() => setIsMenuOpen(false)}
-                className="block text-sm font-semibold text-foreground hover:text-primary transition-colors"
+                className="block text-sm font-semibold hover:text-blue-400 transition-colors"
               >
                 Where We Operate
               </Link>
               <button 
                 onClick={() => scrollToSection('faq')}
-                className="block text-sm font-semibold text-foreground hover:text-primary transition-colors"
+                className="block text-sm font-semibold hover:text-blue-400 transition-colors"
               >
                 FAQ
               </button>
               <div className="pt-4">
                 <Button 
                   onClick={() => setIsWaitlistOpen(true)}
-                  className="bg-primary hover:bg-primary/90 text-primary-foreground rounded-full w-full"
+                  className="bg-blue-600 hover:bg-blue-700 text-white rounded-full w-full"
                 >
                   Join Waitlist
                 </Button>

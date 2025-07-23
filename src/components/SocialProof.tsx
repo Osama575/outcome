@@ -31,18 +31,18 @@ const SocialProof = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-background">
+    <section className="py-20 bg-gray-900">
       <div className="max-w-[1140px] mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left - Phone Mockup */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-primary/20 to-transparent p-8 rounded-3xl">
+            <div className="bg-gradient-to-br from-blue-600/20 to-transparent p-8 rounded-3xl">
               <img 
                 src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
                 alt="$45 Win Screenshot"
                 className="rounded-2xl shadow-2xl max-w-xs mx-auto"
               />
-              <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-4 py-2 rounded-full font-bold">
+              <div className="absolute top-4 left-4 bg-blue-600 text-white px-4 py-2 rounded-full font-bold">
                 +$45 Win!
               </div>
             </div>
@@ -50,30 +50,30 @@ const SocialProof = () => {
 
           {/* Right - Testimonials */}
           <div className="space-y-8">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground">Real Players, Real Wins</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">Real Players, Real Wins</h2>
             
             <div className="space-y-6">
               {testimonials.map((testimonial, index) => (
-                <div key={index} className="bg-card p-6 rounded-xl border border-border">
-                  <p className="text-foreground mb-4 italic">"{testimonial.quote}"</p>
+                <div key={index} className="bg-white/5 p-6 rounded-xl border border-white/10">
+                  <p className="text-white/90 mb-4 italic">"{testimonial.quote}"</p>
                   <div className="flex items-center gap-3">
                     <img 
                       src={testimonial.avatar}
                       alt={testimonial.name}
                       className="w-10 h-10 rounded-full"
                     />
-                    <span className="font-semibold text-foreground">{testimonial.name}</span>
+                    <span className="font-semibold">{testimonial.name}</span>
                   </div>
                 </div>
               ))}
             </div>
 
             {/* Money Counter */}
-            <div className="text-center p-6 bg-gradient-to-r from-primary/10 to-transparent rounded-xl">
-              <div className="text-3xl font-bold text-primary">
+            <div className="text-center p-6 bg-gradient-to-r from-blue-600/10 to-transparent rounded-xl">
+              <div className="text-3xl font-bold text-blue-400">
                 ${totalPaid.toLocaleString()}+
               </div>
-              <p className="text-muted-foreground">paid to players so far</p>
+              <p className="text-white/70">paid to players so far</p>
             </div>
           </div>
         </div>
