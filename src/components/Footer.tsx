@@ -44,13 +44,13 @@ const Footer = () => {
           }
         `}
       </style>
-      
+
       <footer className="bg-gradient-to-br from-gray-900 via-black to-gray-900 border-t border-blue-900/30 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-900/5 via-black to-purple-900/5"></div>
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
-        
+
         <div className="relative z-10 max-w-[1140px] mx-auto px-6 py-12">
           <div className="grid md:grid-cols-5 gap-8">
             {/* Logo Column - Enhanced */}
@@ -75,7 +75,7 @@ const Footer = () => {
               </h4>
               <ul className="space-y-3">
                 <li>
-                  <button 
+                  <button
                     onClick={() => scrollToSection('how-it-works')}
                     className="text-white/70 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-400 hover:bg-clip-text text-sm transition-all duration-300 hover:translate-x-1 block"
                   >
@@ -83,7 +83,7 @@ const Footer = () => {
                   </button>
                 </li>
                 <li>
-                  <Link 
+                  <Link
                     to="/features"
                     className="text-white/70 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-400 hover:bg-clip-text text-sm transition-all duration-300 hover:translate-x-1 block"
                   >
@@ -110,14 +110,20 @@ const Footer = () => {
               </h4>
               <ul className="space-y-3">
                 <li>
-                  <button className="text-white/70 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-400 hover:bg-clip-text text-sm transition-all duration-300 hover:translate-x-1 block">
-                    Terms of Service
-                  </button>
+                  <Link
+                    to="/terms"
+                    className="text-white/70 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-400 hover:bg-clip-text text-sm transition-all duration-300 hover:translate-x-1 block"
+                  >
+                    Terms & Conditions
+                  </Link>
                 </li>
                 <li>
-                  <button className="text-white/70 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-400 hover:bg-clip-text text-sm transition-all duration-300 hover:translate-x-1 block">
+                  <Link 
+                    to="/privacy"
+                    className="text-white/70 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-400 hover:bg-clip-text text-sm transition-all duration-300 hover:translate-x-1 block"
+                  >
                     Privacy Policy
-                  </button>
+                  </Link>
                 </li>
                 <li>
                   <button className="text-white/70 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-400 hover:bg-clip-text text-sm transition-all duration-300 hover:translate-x-1 block">
@@ -125,7 +131,7 @@ const Footer = () => {
                   </button>
                 </li>
                 <li>
-                  <button 
+                  <button
                     onClick={() => handleExternalLink('https://www.ncpgambling.org/')}
                     className="text-white/70 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-400 hover:bg-clip-text text-sm transition-all duration-300 hover:translate-x-1 block"
                   >
@@ -142,9 +148,12 @@ const Footer = () => {
               </h4>
               <ul className="space-y-3">
                 <li>
-                  <button className="text-white/70 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-400 hover:bg-clip-text text-sm transition-all duration-300 hover:translate-x-1 block">
+                  <Link 
+                    to="/support"
+                    className="text-white/70 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-400 hover:bg-clip-text text-sm transition-all duration-300 hover:translate-x-1 block"
+                  >
                     Help Center
-                  </button>
+                  </Link>
                 </li>
                 <li>
                   <button className="text-white/70 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-400 hover:bg-clip-text text-sm transition-all duration-300 hover:translate-x-1 block">
@@ -171,7 +180,7 @@ const Footer = () => {
               </h4>
               <ul className="space-y-3">
                 <li>
-                  <button 
+                  <button
                     onClick={() => handleExternalLink('https://twitter.com')}
                     className="text-white/70 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-400 hover:bg-clip-text text-sm transition-all duration-300 hover:translate-x-1 block"
                   >
@@ -179,7 +188,7 @@ const Footer = () => {
                   </button>
                 </li>
                 <li>
-                  <button 
+                  <button
                     onClick={() => handleExternalLink('https://instagram.com')}
                     className="text-white/70 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-400 hover:bg-clip-text text-sm transition-all duration-300 hover:translate-x-1 block"
                   >
@@ -187,7 +196,7 @@ const Footer = () => {
                   </button>
                 </li>
                 <li>
-                  <button 
+                  <button
                     onClick={() => handleExternalLink('https://discord.com')}
                     className="text-white/70 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-400 hover:bg-clip-text text-sm transition-all duration-300 hover:translate-x-1 block"
                   >
@@ -195,7 +204,7 @@ const Footer = () => {
                   </button>
                 </li>
                 <li>
-                  <button 
+                  <button
                     onClick={() => handleExternalLink('https://reddit.com')}
                     className="text-white/70 hover:text-transparent hover:bg-gradient-to-r hover:from-blue-400 hover:to-purple-400 hover:bg-clip-text text-sm transition-all duration-300 hover:translate-x-1 block"
                   >
@@ -212,7 +221,7 @@ const Footer = () => {
             <div className="absolute top-0 left-0 right-0 h-px opacity-50">
               <div className="absolute inset-0 shimmer-border"></div>
             </div>
-            
+
             <div className="flex flex-col md:flex-row justify-between items-center gap-4">
               <div className="flex flex-wrap gap-6 text-sm text-white/70">
                 <span className="bg-gradient-to-r from-white/90 to-blue-200/90 bg-clip-text text-transparent font-semibold">

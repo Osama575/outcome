@@ -132,110 +132,16 @@ const Hero = () => {
               {/* Right Phone Mockup */}
               <div className="relative flex justify-center lg:justify-end">
                 <div className="relative">
-                  {/* Floating Phone */}
+                  {/* Floating Phone Image */}
                   <div className="relative animate-float">
-                    <div className="relative z-20 bg-gradient-to-b from-gray-800 via-gray-900 to-black rounded-[3rem] p-2 shadow-2xl animate-glow">
-                      <div className="bg-black rounded-[2.5rem] overflow-hidden w-[320px] h-[640px] relative">
-                        
-                        {/* Phone Screen Content */}
-                        <div className="absolute inset-0 bg-gradient-to-b from-gray-900 via-black to-gray-900 p-6">
-                          
-                          {/* Status Bar */}
-                          <div className="flex justify-between items-center text-white text-sm mb-6">
-                            <span className="font-semibold">9:41</span>
-                            <div className="flex items-center gap-1">
-                              <div className="flex gap-1">
-                                <div className="w-1 h-1 bg-white rounded-full"></div>
-                                <div className="w-1 h-1 bg-white rounded-full"></div>
-                                <div className="w-1 h-1 bg-white/50 rounded-full"></div>
-                              </div>
-                              <div className="w-6 h-3 border border-white rounded-sm">
-                                <div className="w-4 h-2 bg-white rounded-sm m-0.5"></div>
-                              </div>
-                            </div>
-                          </div>
-
-                          {/* Contest Header */}
-                          <div className="text-center mb-6">
-                            <h3 className="text-white font-bold text-xl mb-1">NBA Head-to-Head</h3>
-                            <p className="text-blue-400 text-sm font-medium">2 Players • $25 Each</p>
-                          </div>
-
-                          {/* Players in Contest */}
-                          <div className="bg-gray-800/50 rounded-xl p-4 mb-6">
-                            <div className="flex justify-between items-center mb-3">
-                              <span className="text-gray-400 text-sm">Players</span>
-                              <span className="text-green-400 text-sm font-semibold">2/2 Joined</span>
-                            </div>
-                            <div className="space-y-2">
-                              <div className="flex items-center justify-between">
-                                <div className="flex items-center gap-2">
-                                  <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center">
-                                    <span className="text-white text-xs font-bold">You</span>
-                                  </div>
-                                  <span className="text-white text-sm">Alex_23</span>
-                                </div>
-                                <span className="text-green-400 text-sm font-bold">$25</span>
-                              </div>
-                              <div className="flex items-center justify-between">
-                                <div className="flex items-center gap-2">
-                                  <div className="w-8 h-8 bg-purple-500 rounded-full flex items-center justify-center">
-                                    <span className="text-white text-xs font-bold">MJ</span>
-                                  </div>
-                                  <span className="text-white text-sm">MikeJ_99</span>
-                                </div>
-                                <span className="text-green-400 text-sm font-bold">$25</span>
-                              </div>
-                            </div>
-                          </div>
-
-                          {/* Player Pick */}
-                          <div className="space-y-3 mb-6">
-                            <div className="bg-gradient-to-r from-purple-900/40 to-blue-900/40 rounded-xl p-4 border border-purple-500/30">
-                              <div className="flex justify-between items-center mb-3">
-                                <div className="flex items-center gap-3">
-                                  <div className="w-10 h-10 bg-yellow-500 rounded-full flex items-center justify-center">
-                                    <span className="text-purple-900 font-bold text-sm">LJ</span>
-                                  </div>
-                                  <div>
-                                    <p className="text-white font-semibold">LeBron James</p>
-                                    <p className="text-gray-400 text-xs">LAL vs GSW</p>
-                                  </div>
-                                </div>
-                                <div className="text-right">
-                                  <p className="text-green-400 font-bold">25.5</p>
-                                  <p className="text-xs text-gray-400">Points</p>
-                                </div>
-                              </div>
-                              <div className="flex justify-between text-sm">
-                                <div className="text-blue-400">Your Pick: MORE</div>
-                                <div className="text-purple-400">Opponent: LESS</div>
-                              </div>
-                            </div>
-                          </div>
-
-                          {/* Contest Status */}
-                          <div className="space-y-3">
-                            <div className="bg-gray-800/50 rounded-xl p-4">
-                              <div className="flex justify-between items-center mb-2">
-                                <span className="text-gray-400">Total Pot</span>
-                                <span className="text-white font-bold text-xl">$50</span>
-                              </div>
-                              <div className="flex justify-between items-center">
-                                <span className="text-gray-400 text-sm">Winner Takes All</span>
-                                <span className="text-green-400 text-sm">Live Contest</span>
-                              </div>
-                            </div>
-                            
-                            <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-xl p-4">
-                              <div className="text-center">
-                                <span className="text-white font-bold">Game Starting Soon</span>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <img 
+                      src="/hero-phone.png"
+                      alt="Hero Phone Mockup"
+                      className="relative z-20 w-[320px] h-auto max-w-full shadow-2xl animate-glow rounded-[3rem]"
+                      style={{
+                        filter: 'drop-shadow(0 25px 50px rgba(0, 0, 0, 0.5))'
+                      }}
+                    />
                   </div>
                   
                   {/* Background Glow Effects */}

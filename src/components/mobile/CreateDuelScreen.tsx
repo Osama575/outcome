@@ -34,11 +34,10 @@ const CreateDuelScreen = () => {
             <button
               key={sport.id}
               onClick={() => setSelectedSport(sport.id)}
-              className={`p-4 rounded-2xl border-2 transition-all ${
-                selectedSport === sport.id
+              className={`p-4 rounded-2xl border-2 transition-all ${selectedSport === sport.id
                   ? 'border-emerald-400 bg-emerald-900/30'
                   : 'border-gray-700 bg-gray-800'
-              }`}
+                }`}
             >
               <div className={`w-12 h-12 ${sport.color} rounded-full flex items-center justify-center mx-auto mb-2`}>
                 <sport.icon className="h-6 w-6 text-white" />
@@ -88,11 +87,10 @@ const CreateDuelScreen = () => {
             <button
               key={amount}
               onClick={() => setSelectedAmount(amount)}
-              className={`py-3 rounded-xl font-semibold transition-all ${
-                selectedAmount === amount
+              className={`py-3 rounded-xl font-semibold transition-all ${selectedAmount === amount
                   ? 'bg-emerald-600 text-white'
                   : 'bg-gray-800 text-gray-300 border border-gray-700'
-              }`}
+                }`}
             >
               ${amount}
             </button>
