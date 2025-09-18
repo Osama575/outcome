@@ -1,267 +1,73 @@
-# Outcome Duel Landing Page
+# Welcome to your Lovable project
 
-A modern, responsive landing page for Outcome Duel - a skill-based prediction platform where users can create and participate in peer-to-peer contests. Built with React, TypeScript, and modern web technologies.
+## Project info
 
-## 🚀 Features
+**URL**: https://lovable.dev/projects/eba67d11-c517-4f80-9905-d8c02e6656d7
 
-- **Responsive Design**: Mobile-first approach with dedicated mobile components
-- **Modern UI/UX**: Built with shadcn/ui components and Tailwind CSS
-- **Interactive Elements**: Hero section, features showcase, FAQ, and contact forms
-- **Mobile App Integration**: Dedicated mobile screens and navigation
-- **Performance Optimized**: Built with Vite for fast development and production builds
-- **TypeScript**: Full type safety and better development experience
+## How can I edit this code?
 
-## 🛠️ Tech Stack
+There are several ways of editing your application.
 
-- **Frontend Framework**: React 18 with TypeScript
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS
-- **UI Components**: shadcn/ui
-- **Icons**: Lucide React
-- **State Management**: React Hooks
-- **Routing**: React Router (if implemented)
-- **Development**: ESLint, PostCSS
+**Use Lovable**
 
-## 📱 Project Structure
+Simply visit the [Lovable Project](https://lovable.dev/projects/eba67d11-c517-4f80-9905-d8c02e6656d7) and start prompting.
 
-```
-outcome-duel-landing-page/
-├── public/                 # Static assets
-├── src/
-│   ├── components/         # Reusable UI components
-│   │   ├── ui/            # shadcn/ui components
-│   │   ├── mobile/        # Mobile-specific components
-│   │   └── ...            # Other components
-│   ├── hooks/             # Custom React hooks
-│   ├── lib/               # Utility functions
-│   ├── pages/             # Page components
-│   ├── App.tsx            # Main app component
-│   └── main.tsx           # App entry point
-├── package.json            # Dependencies and scripts
-├── tailwind.config.ts      # Tailwind configuration
-├── vite.config.ts          # Vite configuration
-└── tsconfig.json           # TypeScript configuration
+Changes made via Lovable will be committed automatically to this repo.
+
+**Use your preferred IDE**
+
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+
+Follow these steps:
+
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
+
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
+
+# Step 3: Install the necessary dependencies.
+npm i
+
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
 ```
 
-## 🚀 Getting Started
+**Edit a file directly in GitHub**
 
-### Prerequisites
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
 
-- **Node.js**: Version 18.0.0 or higher
-- **npm**: Version 8.0.0 or higher (comes with Node.js)
-- **Git**: For version control
+**Use GitHub Codespaces**
 
-### Installation
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-1. **Clone the repository**
-   ```bash
-   git clone <your-repository-url>
-   cd outcome-duel-landing-page
-   ```
+## What technologies are used for this project?
 
-2. **Install dependencies**
-   ```bash
-   npm install
-   # or
-   yarn install
-   # or
-   bun install
-   ```
+This project is built with:
 
-3. **Start development server**
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   # or
-   bun dev
-   ```
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
 
-4. **Open your browser**
-   Navigate to `http://localhost:5173` (or the port shown in your terminal)
+## How can I deploy this project?
 
-## 📱 Development
+Simply open [Lovable](https://lovable.dev/projects/eba67d11-c517-4f80-9905-d8c02e6656d7) and click on Share -> Publish.
 
-### Available Scripts
+## Can I connect a custom domain to my Lovable project?
 
-- `npm run dev` - Start development server with hot reload
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build locally
-- `npm run lint` - Run ESLint for code quality
-- `npm run type-check` - Run TypeScript type checking
+Yes, you can!
 
-### Development Guidelines
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
-- **Component Structure**: Use functional components with TypeScript
-- **Styling**: Prefer Tailwind CSS classes over custom CSS
-- **State Management**: Use React hooks for local state
-- **Props**: Define proper TypeScript interfaces for component props
-- **File Naming**: Use PascalCase for components, camelCase for utilities
-
-### Mobile Development
-
-The project includes dedicated mobile components in `src/components/mobile/`:
-- `MobileHomeScreen.tsx` - Main mobile landing page
-- `MobileNavigation.tsx` - Mobile navigation component
-- `CreateDuelScreen.tsx` - Contest creation interface
-- `ActiveDuelScreen.tsx` - Active contest management
-- `FriendsScreen.tsx` - Social features
-
-## 🎨 UI Components
-
-### shadcn/ui Components
-
-The project uses shadcn/ui for consistent, accessible components:
-- **Buttons**: Various button variants and sizes
-- **Forms**: Input fields, checkboxes, radio buttons
-- **Navigation**: Menus, dropdowns, breadcrumbs
-- **Feedback**: Alerts, toasts, modals
-- **Layout**: Cards, containers, grids
-
-### Custom Components
-
-- **Navigation**: Main site navigation with scroll effects
-- **Hero**: Landing page hero section with CTA
-- **Features**: Platform feature showcase
-- **FAQ**: Interactive FAQ section
-- **Footer**: Site footer with links and information
-
-## 🌐 Deployment
-
-### Azure Static Web Apps (Recommended)
-
-1. **Push your code to GitHub**
-2. **Create Azure Static Web App**
-   - Go to Azure Portal
-   - Search for "Static Web Apps"
-   - Click "Create"
-   - Connect your GitHub repository
-   - Azure will auto-detect React and build automatically
-
-3. **Configuration**
-   - Build command: `npm run build`
-   - Output directory: `dist`
-   - API routes: None (static site)
-
-### Alternative Deployment Options
-
-#### Vercel
-```bash
-npm install -g vercel
-vercel
-```
-
-#### Netlify
-1. Connect your GitHub repository
-2. Build command: `npm run build`
-3. Publish directory: `dist`
-
-#### GitHub Pages
-1. Enable GitHub Pages in repository settings
-2. Set source to GitHub Actions
-3. Use `peaceiris/actions-gh-pages` action
-
-## 🔧 Configuration
-
-### Environment Variables
-
-Create a `.env.local` file for local development:
-```env
-VITE_API_URL=your_api_url_here
-VITE_APP_NAME=Outcome Duel
-```
-
-### Tailwind CSS
-
-The project uses Tailwind CSS with custom configuration:
-- Custom color palette
-- Responsive breakpoints
-- Component-specific utilities
-
-### TypeScript
-
-- Strict mode enabled
-- Path aliases configured (`@/` points to `src/`)
-- Proper type definitions for all components
-
-## 📱 Mobile Responsiveness
-
-The landing page is fully responsive with:
-- Mobile-first design approach
-- Dedicated mobile components
-- Touch-friendly interactions
-- Optimized layouts for all screen sizes
-
-## 🧪 Testing
-
-### Manual Testing
-- Test on multiple browsers (Chrome, Firefox, Safari, Edge)
-- Test on various devices and screen sizes
-- Verify all interactive elements work correctly
-- Check accessibility features
-
-### Automated Testing (Future)
-- Unit tests with Jest/Vitest
-- Component testing with React Testing Library
-- E2E testing with Playwright or Cypress
-
-## 📚 Documentation
-
-- **Component Documentation**: Each component includes JSDoc comments
-- **Type Definitions**: Full TypeScript interfaces for all data structures
-- **Code Examples**: Usage examples in component files
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-### Code Style
-- Follow existing code formatting
-- Use meaningful variable and function names
-- Add comments for complex logic
-- Ensure TypeScript types are properly defined
-
-## 📄 License
-
-This project is proprietary software. All rights reserved.
-
-## 🆘 Support
-
-For support and questions:
-- **Email**: help@outcomeduel.com
-- **Documentation**: Check the project wiki
-- **Issues**: Use GitHub Issues for bug reports
-
-## 🔄 Updates and Maintenance
-
-### Regular Maintenance
-- Update dependencies monthly
-- Review and update TypeScript types
-- Optimize bundle size
-- Monitor performance metrics
-
-### Security Updates
-- Keep dependencies up to date
-- Regular security audits
-- Monitor for vulnerabilities
-
-## 📊 Performance
-
-### Optimization Features
-- Code splitting with Vite
-- Optimized images and assets
-- Lazy loading for components
-- Efficient CSS with Tailwind
-
-### Monitoring
-- Core Web Vitals tracking
-- Performance metrics
-- User experience analytics
-
----
-
-**Built with ❤️ using modern web technologies**
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
