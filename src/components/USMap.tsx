@@ -6,7 +6,6 @@ import {
   ComposableMap,
   Geographies,
   Geography,
-  ZoomableGroup,
   Annotation
 } from "react-simple-maps";
 
@@ -260,7 +259,6 @@ const USMap = () => {
                     height={610}
                     style={{ width: "100%", height: "auto" }}
                   >
-                    <ZoomableGroup disablePanning disableZooming>
                       <Geographies geography={geoUrl}>
                         {({ geographies }) => (
                           <>
@@ -328,7 +326,6 @@ const USMap = () => {
                           </>
                         )}
                       </Geographies>
-                    </ZoomableGroup>
                   </ComposableMap>
                   
                   {/* Hover Info Box */}

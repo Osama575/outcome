@@ -2,6 +2,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import MobileBottomBar from "@/components/MobileBottomBar";
+import USMap from "@/components/USMap";
 import { useEffect, useState } from "react";
 
 const WhereWeOperatePage = () => {
@@ -20,56 +21,10 @@ const WhereWeOperatePage = () => {
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
       <Navigation isScrolled={isScrolled} />
       
-      {/* Hero Section */}
-      <section className="pt-24 pb-20 bg-gray-900">
-        <div className="max-w-[1140px] mx-auto px-6">
-          <div className="text-center mb-16">
-            <h1 className="text-4xl md:text-5xl font-bold mb-6">Where You Can Play</h1>
-            <p className="text-xl text-white/80 max-w-2xl mx-auto">
-              Outcome Duel is available in select US states where skill-based contests are legal and regulated.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left - Map Placeholder */}
-            <div className="relative">
-              <div className="bg-white/5 p-8 rounded-2xl border border-white/10">
-                <div className="aspect-video bg-gradient-to-br from-blue-600/20 to-transparent rounded-xl flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="text-6xl mb-4">🗺️</div>
-                    <p className="text-white/70 text-lg font-semibold">US States Map</p>
-                    <p className="text-sm text-white/50">Eligible states highlighted in blue</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Right - State Information */}
-            <div className="space-y-8">
-              <div className="bg-white/5 p-6 rounded-xl border border-white/10">
-                <h3 className="text-xl font-semibold mb-4 text-blue-400">18+ Players Eligible</h3>
-                <p className="text-white/80 leading-relaxed">
-                  AL, AK, CA, CO, FL, GA, IL, IN, KS, KY, MN, MO, NE, NM, NC, ND, OK, OR, RI, SC, SD, TN, TX, UT, VT, VA, WV, WI, WY
-                </p>
-              </div>
-
-              <div className="bg-white/5 p-6 rounded-xl border border-white/10">
-                <h3 className="text-xl font-semibold mb-4 text-blue-400">21+ Players Eligible</h3>
-                <p className="text-white/80 leading-relaxed">
-                  AZ, MA, NH
-                </p>
-              </div>
-
-              <div className="bg-white/5 p-6 rounded-xl border border-white/10">
-                <h3 className="text-xl font-semibold mb-4 text-red-400">Currently Not Available</h3>
-                <p className="text-white/80 leading-relaxed">
-                  We're working to expand to more states. Check back soon for updates on availability in your area.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="pt-[120px]">
+        {/* Interactive US Map */}
+        <USMap />
+      </div>
 
       {/* Legal Information */}
       <section className="py-20 bg-black">
