@@ -7,8 +7,8 @@ import { ArrowLeft, MessageCircle, Clock, TrendingUp, Shield } from 'lucide-reac
 const ActiveDuelScreen = () => {
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([
-    { user: 'Mike_Jordan23', message: 'Good luck! 🏀', time: '2:34 PM' },
-    { user: 'You', message: 'You too! Chiefs got this 💪', time: '2:35 PM' },
+    { user: 'Thierry_Henry', message: 'Good luck! 🏀', time: '2:34 PM' },
+    { user: 'You', message: 'You too! Arsenal Got This💪', time: '2:35 PM' },
   ]);
 
   const handleSendMessage = () => {
