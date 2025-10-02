@@ -11,7 +11,7 @@ const HowItWorks = () => {
       icon: Play,
       title: "Pick Your Play",
       description: "Choose player stats to predict",
-      detail: "Select from NBA, NFL, MLB player props",
+      detail: "Select from EPL, UCL, NBA, NFL, MLS",
       color: "from-blue-500 to-purple-600"
     },
     {
@@ -31,7 +31,7 @@ const HowItWorks = () => {
     {
       icon: Trophy,
       title: "Winner Takes All",
-      description: "Most accurate prediction wins",
+      description: "Accurate predictions wins",
       detail: "No house edge, pure skill",
       color: "from-red-500 to-orange-600"
     }
@@ -106,47 +106,40 @@ const HowItWorks = () => {
               {steps.map((step, index) => (
                 <div
                   key={index}
-                  className={`group cursor-pointer transition-all duration-500 ${
-                    activeStep === index ? 'scale-105' : 'hover:scale-102'
-                  }`}
+                  className={`group cursor-pointer transition-all duration-500 ${activeStep === index ? 'scale-105' : 'hover:scale-102'
+                    }`}
                   onMouseEnter={() => setActiveStep(index)}
                 >
-                  <div className={`relative p-6 rounded-2xl border transition-all duration-500 ${
-                    activeStep === index 
-                      ? 'bg-gradient-to-r ' + step.color + ' border-transparent animate-pulse-glow' 
-                      : 'bg-gray-900/50 border-gray-800 hover:border-gray-700'
-                  }`}>
+                  <div className={`relative p-6 rounded-2xl border transition-all duration-500 ${activeStep === index
+                    ? 'bg-gradient-to-r ' + step.color + ' border-transparent animate-pulse-glow'
+                    : 'bg-gray-900/50 border-gray-800 hover:border-gray-700'
+                    }`}>
                     <div className="flex items-center gap-4">
-                      <div className={`w-16 h-16 rounded-xl flex items-center justify-center transition-all duration-300 ${
-                        activeStep === index 
-                          ? 'bg-white/20 text-white' 
-                          : 'bg-gray-800 text-gray-400 group-hover:text-white'
-                      }`}>
+                      <div className={`w-16 h-16 rounded-xl flex items-center justify-center transition-all duration-300 ${activeStep === index
+                        ? 'bg-white/20 text-white'
+                        : 'bg-gray-800 text-gray-400 group-hover:text-white'
+                        }`}>
                         <step.icon className="w-8 h-8" />
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center justify-between mb-2">
-                          <h3 className={`text-xl font-bold transition-colors ${
-                            activeStep === index ? 'text-white' : 'text-gray-300'
-                          }`}>
+                          <h3 className={`text-xl font-bold transition-colors ${activeStep === index ? 'text-white' : 'text-gray-300'
+                            }`}>
                             {step.title}
                           </h3>
-                          <span className={`text-sm font-semibold px-2 py-1 rounded-full transition-all ${
-                            activeStep === index 
-                              ? 'bg-white/20 text-white' 
-                              : 'bg-gray-800 text-gray-400'
-                          }`}>
+                          <span className={`text-sm font-semibold px-2 py-1 rounded-full transition-all ${activeStep === index
+                            ? 'bg-white/20 text-white'
+                            : 'bg-gray-800 text-gray-400'
+                            }`}>
                             0{index + 1}
                           </span>
                         </div>
-                        <p className={`transition-colors ${
-                          activeStep === index ? 'text-white/90' : 'text-gray-400'
-                        }`}>
+                        <p className={`transition-colors ${activeStep === index ? 'text-white/90' : 'text-gray-400'
+                          }`}>
                           {step.description}
                         </p>
-                        <p className={`text-sm mt-1 transition-colors ${
-                          activeStep === index ? 'text-white/70' : 'text-gray-500'
-                        }`}>
+                        <p className={`text-sm mt-1 transition-colors ${activeStep === index ? 'text-white/70' : 'text-gray-500'
+                          }`}>
                           {step.detail}
                         </p>
                       </div>
@@ -163,25 +156,56 @@ const HowItWorks = () => {
                   {activeStep === 0 && (
                     <div className="space-y-4">
                       <h4 className="text-white font-bold text-lg mb-4">Choose Your Prediction</h4>
-                      <div className="bg-gradient-to-r from-blue-900/40 to-purple-900/40 rounded-xl p-4 border border-blue-500/30">
-                        <div className="flex items-center justify-between mb-4">
-                          <div className="flex items-center gap-2">
-                            <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
-                              <span className="text-white font-bold text-xs">LAL</span>
-                            </div>
-                            <span className="text-white font-semibold">Lakers</span>
-                          </div>
-                          <span className="text-gray-400 font-bold">VS</span>
-                          <div className="flex items-center gap-2">
-                            <span className="text-white font-semibold">Warriors</span>
-                            <div className="w-8 h-8 bg-yellow-500 rounded-full flex items-center justify-center">
-                              <span className="text-purple-900 font-bold text-xs">GSW</span>
+                      <div className="bg-gradient-to-r from-gray-800/40 to-gray-900/40 rounded-xl p-4 border border-gray-600/30">
+                        <div className="relative">
+                          <img
+                            src="/pick.png"
+                            alt="Manchester United vs Liverpool match"
+                            className="w-full h-auto rounded-lg"
+                            onError={(e) => {
+                              // Fallback to SVG if image doesn't exist
+                              e.currentTarget.style.display = 'none';
+                              const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                              if (fallback) fallback.style.display = 'block';
+                            }}
+                          />
+                          <div className="hidden">
+                            {/* Fallback SVG if image doesn't exist */}
+                            <div className="flex items-center justify-between mb-4">
+                              <div className="flex items-center gap-3">
+                                <div className="w-10 h-10 flex items-center justify-center">
+                                  <svg width="40" height="40" viewBox="0 0 40 40" className="rounded-full">
+                                    <circle cx="20" cy="20" r="20" fill="#DA020E" />
+                                    <circle cx="20" cy="20" r="18" fill="none" stroke="#FFD700" strokeWidth="1" />
+                                    <path d="M12 15h16v2H12zm0 4h16v2H12zm0 4h16v2H12z" fill="#FFD700" />
+                                    <text x="20" y="18" textAnchor="middle" fill="#FFD700" fontSize="6" fontWeight="bold">MANCHESTER</text>
+                                    <text x="20" y="25" textAnchor="middle" fill="#FFD700" fontSize="6" fontWeight="bold">UNITED</text>
+                                  </svg>
+                                </div>
+                                <span className="text-white font-semibold text-sm">Manchester United</span>
+                              </div>
+                              <div className="flex items-center gap-1">
+                                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                                <span className="text-green-400 text-xs font-semibold">LIVE</span>
+                              </div>
+                              <div className="flex items-center gap-3">
+                                <span className="text-white font-semibold text-sm">Liverpool</span>
+                                <div className="w-10 h-10 flex items-center justify-center">
+                                  <svg width="40" height="40" viewBox="0 0 40 40" className="rounded-full">
+                                    <circle cx="20" cy="20" r="20" fill="#C8102E" />
+                                    <path d="M20 8c-6.6 0-12 5.4-12 12s5.4 12 12 12 12-5.4 12-12-5.4-12-12-12zm0 2c5.5 0 10 4.5 10 10s-4.5 10-10 10-10-4.5-10-10 4.5-10 10-10z" fill="#FFD700" />
+                                    <path d="M20 12c-4.4 0-8 3.6-8 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8z" fill="#C8102E" />
+                                    <text x="20" y="18" textAnchor="middle" fill="#FFD700" fontSize="5" fontWeight="bold">LIVERPOOL</text>
+                                    <text x="20" y="24" textAnchor="middle" fill="#FFD700" fontSize="4">FC</text>
+                                  </svg>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
                         <div className="text-center">
                           <p className="text-2xl font-bold text-white">Pick the Winner</p>
-                          <p className="text-blue-400 text-sm">Choose your team</p>
+                          <p className="text-gray-400 text-sm">Choose your team</p>
                         </div>
                       </div>
                     </div>
@@ -190,23 +214,39 @@ const HowItWorks = () => {
                   {activeStep === 1 && (
                     <div className="space-y-4">
                       <h4 className="text-white font-bold text-lg mb-4">Find Your Opponent</h4>
-                      <div className="bg-gray-800/50 rounded-xl p-4">
-                        <div className="flex justify-between items-center mb-3">
-                          <span className="text-gray-400 text-sm">Looking for opponent...</span>
-                          <div className="flex space-x-1">
-                            <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
-                            <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse delay-100"></div>
-                            <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse delay-200"></div>
-                          </div>
-                        </div>
-                        <div className="bg-green-600/20 border border-green-500/30 rounded-lg p-3">
-                          <div className="flex items-center gap-2">
-                            <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
-                              <span className="text-white text-xs font-bold">MJ</span>
+                      <div className="relative">
+                        <img
+                          src="/match.png"
+                          alt="Find your match"
+                          className="w-full h-auto rounded-lg"
+                          onError={(e) => {
+                            // Fallback to original design if image doesn't exist
+                            e.currentTarget.style.display = 'none';
+                            const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                            if (fallback) fallback.style.display = 'block';
+                          }}
+                        />
+                        <div className="hidden">
+                          {/* Fallback design if image doesn't exist */}
+                          <div className="bg-gray-800/50 rounded-xl p-4">
+                            <div className="flex justify-between items-center mb-3">
+                              <span className="text-gray-400 text-sm">Looking for opponent...</span>
+                              <div className="flex space-x-1">
+                                <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+                                <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse delay-100"></div>
+                                <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse delay-200"></div>
+                              </div>
                             </div>
-                            <div>
-                              <span className="text-white font-semibold">MikeJ_99 matched!</span>
-                              <p className="text-green-400 text-xs">Ready to compete</p>
+                            <div className="bg-green-600/20 border border-green-500/30 rounded-lg p-3">
+                              <div className="flex items-center gap-2">
+                                <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                                  <span className="text-white text-xs font-bold">MJ</span>
+                                </div>
+                                <div>
+                                  <span className="text-white font-semibold">MikeJ_99 matched!</span>
+                                  <p className="text-green-400 text-xs">Ready to compete</p>
+                                </div>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -217,25 +257,41 @@ const HowItWorks = () => {
                   {activeStep === 2 && (
                     <div className="space-y-4">
                       <h4 className="text-white font-bold text-lg mb-4">Equal Stakes</h4>
-                      <div className="grid grid-cols-2 gap-4">
-                        <div className="bg-blue-600/20 rounded-xl p-4 text-center">
-                          <div className="w-8 h-8 bg-blue-500 rounded-full mx-auto mb-2 flex items-center justify-center">
-                            <span className="text-white text-xs font-bold">You</span>
+                      <div className="relative">
+                        <img
+                          src="/stakes.png"
+                          alt="Equal stakes"
+                          className="w-full h-auto rounded-lg"
+                          onError={(e) => {
+                            // Fallback to original design if image doesn't exist
+                            e.currentTarget.style.display = 'none';
+                            const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                            if (fallback) fallback.style.display = 'block';
+                          }}
+                        />
+                        <div className="hidden">
+                          {/* Fallback design if image doesn't exist */}
+                          <div className="grid grid-cols-2 gap-4">
+                            <div className="bg-blue-600/20 rounded-xl p-4 text-center">
+                              <div className="w-8 h-8 bg-blue-500 rounded-full mx-auto mb-2 flex items-center justify-center">
+                                <span className="text-white text-xs font-bold">You</span>
+                              </div>
+                              <p className="text-white font-semibold">$25</p>
+                              <p className="text-blue-400 text-sm">Your stake</p>
+                            </div>
+                            <div className="bg-purple-600/20 rounded-xl p-4 text-center">
+                              <div className="w-8 h-8 bg-purple-500 rounded-full mx-auto mb-2 flex items-center justify-center">
+                                <span className="text-white text-xs font-bold">MJ</span>
+                              </div>
+                              <p className="text-white font-semibold">$25</p>
+                              <p className="text-purple-400 text-sm">Opponent stake</p>
+                            </div>
                           </div>
-                          <p className="text-white font-semibold">$25</p>
-                          <p className="text-blue-400 text-sm">Your stake</p>
-                        </div>
-                        <div className="bg-purple-600/20 rounded-xl p-4 text-center">
-                          <div className="w-8 h-8 bg-purple-500 rounded-full mx-auto mb-2 flex items-center justify-center">
-                            <span className="text-white text-xs font-bold">MJ</span>
+                          <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl p-4 text-center">
+                            <p className="text-white text-2xl font-bold">$50</p>
+                            <p className="text-green-200 text-sm">Total Prize Pool</p>
                           </div>
-                          <p className="text-white font-semibold">$25</p>
-                          <p className="text-purple-400 text-sm">Opponent stake</p>
                         </div>
-                      </div>
-                      <div className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl p-4 text-center">
-                        <p className="text-white text-2xl font-bold">$50</p>
-                        <p className="text-green-200 text-sm">Total Prize Pool</p>
                       </div>
                     </div>
                   )}
@@ -243,16 +299,32 @@ const HowItWorks = () => {
                   {activeStep === 3 && (
                     <div className="space-y-4">
                       <h4 className="text-white font-bold text-lg mb-4">Winner Takes All</h4>
-                      <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-xl p-6 text-center">
-                        <Trophy className="w-12 h-12 text-yellow-400 mx-auto mb-3" />
-                        <p className="text-white text-2xl font-bold mb-2">You Win!</p>
-                        <p className="text-white text-3xl font-black mb-1">$50</p>
-                        <p className="text-orange-200 text-sm">Lakers won 112-108</p>
+                      <div className="relative">
+                        <img
+                          src="/winner.png"
+                          alt="Winner takes all"
+                          className="w-full h-auto rounded-lg"
+                          onError={(e) => {
+                            // Fallback to original design if image doesn't exist
+                            e.currentTarget.style.display = 'none';
+                            const fallback = e.currentTarget.nextElementSibling as HTMLElement;
+                            if (fallback) fallback.style.display = 'block';
+                          }}
+                        />
+                        <div className="hidden">
+                          {/* Fallback design if image doesn't exist */}
+                          <div className="bg-gradient-to-r from-orange-600 to-red-600 rounded-xl p-6 text-center">
+                            <Trophy className="w-12 h-12 text-yellow-400 mx-auto mb-3" />
+                            <p className="text-white text-2xl font-bold mb-2">You Win!</p>
+                            <p className="text-white text-3xl font-black mb-1">$50</p>
+                            <p className="text-orange-200 text-sm">Lakers won 112-108</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   )}
                 </div>
-                
+
                 {/* Floating Elements */}
                 <div className="absolute -top-4 -right-4 w-8 h-8 bg-blue-400/30 rounded-full blur-sm"></div>
                 <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-purple-400/30 rounded-full blur-md"></div>
@@ -266,11 +338,10 @@ const HowItWorks = () => {
               {steps.map((_, index) => (
                 <div
                   key={index}
-                  className={`h-2 rounded-full transition-all duration-300 ${
-                    index === activeStep 
-                      ? 'w-8 bg-gradient-to-r from-blue-400 to-purple-400' 
-                      : 'w-2 bg-gray-700'
-                  }`}
+                  className={`h-2 rounded-full transition-all duration-300 ${index === activeStep
+                    ? 'w-8 bg-gradient-to-r from-blue-400 to-purple-400'
+                    : 'w-2 bg-gray-700'
+                    }`}
                 />
               ))}
             </div>
@@ -278,7 +349,7 @@ const HowItWorks = () => {
 
           {/* CTA */}
           <div className="text-center">
-            <Button 
+            <Button
               size="lg"
               onClick={scrollToSignUp}
               className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl px-8 py-6 text-lg font-bold group shadow-xl"
